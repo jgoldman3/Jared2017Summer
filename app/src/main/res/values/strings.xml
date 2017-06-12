@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Jared2017Summer</string>
     <string name="Hello">Hi there</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_demo_fragment">Hello demo fragment</string>
+    <string name="hello_work_fragment">Hello work fragment</string>
 </resources>
