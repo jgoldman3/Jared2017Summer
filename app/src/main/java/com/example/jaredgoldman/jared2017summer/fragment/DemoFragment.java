@@ -1,15 +1,19 @@
 package com.example.jaredgoldman.jared2017summer.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.jaredgoldman.jared2017summer.R;
+import com.example.jaredgoldman.jared2017summer.ScaleTypeActivity;
+import com.example.jaredgoldman.jared2017summer.ViewPagerActivity;
 import com.example.jaredgoldman.jared2017summer.adapter.ListNormalAdapter;
 
 import java.util.ArrayList;
@@ -17,9 +21,11 @@ import java.util.ArrayList;
 public class DemoFragment extends Fragment {
 
     private final ArrayList<String> contentList;
+    private final Context context;
     private ListView listView;
 
     public DemoFragment() {
+        context = getContext();
         contentList = new ArrayList<String>();
         contentList.add("ViewPager");
         contentList.add("ImageScaleType");
@@ -27,7 +33,7 @@ public class DemoFragment extends Fragment {
         contentList.add("A");
         contentList.add("B");
         contentList.add("C");
-        contentList.add("D");
+        contentList.add("LaunchMode");
         contentList.add("E");
         contentList.add("F");
         contentList.add("G");
@@ -50,6 +56,26 @@ public class DemoFragment extends Fragment {
         ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Intent intent = new Intent(getActivity(), ViewPagerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 6:
+                        Intent intent6 = new Intent(getActivity(), ViewPagerActivity.class);
+                        startActivity(intent6);
+                        break;
+                    default:
+                }
+            }
+        });
         return view;
     }
 }

@@ -15,10 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestActivity">
-        </activity>
-        <activity android:name=".NewActivity">
-        </activity>
+        <activity android:name=".ViewPagerActivity" />
+        <activity
+            android:name=".LaunchModeActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".ScaleTypeActivity"></activity>
     </application>
 
 </manifest>
