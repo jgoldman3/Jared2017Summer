@@ -7,7 +7,10 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 
 public class ActivityA extends AppCompatActivity {
-
+/*HOMEWORK 2:
+* TODO: make Activity B,C,D
+* TODO: make layout files
+* TODO: assign to demo case 6*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

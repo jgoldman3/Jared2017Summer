@@ -1,6 +1,7 @@
 package com.example.jaredgoldman.jared2017summer.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,9 +46,31 @@ public class AdvanceListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.list_normal_item,parent,false);
-        RelativeLayout rl_odd = (RelativeLayout)convertView.findViewById(R.id.odd);
-        RelativeLayout rl_even = (RelativeLayout)convertView.findViewById(R.id.even);
+        Log.d("ViewHolder", "getView");
+        ViewHolder viewHolder;
+        if (convertView == null) {
+            Log.d("ViewHolder","getViewByID");
+            convertView = inflater.inflate(R.layout.activity_advance_list_item, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.rl_odd = (RelativeLayout)convertView.findViewById(R.id.odd);
+            viewHolder.rl_even = (RelativeLayout)convertView.findViewById(R.id.even);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder)convertView.getTag();
+        }
+
+        if (position%2 == 0) {
+            viewHolder.rl_odd.setVisibility(View.INVISIBLE);
+            viewHolder.rl_even.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.rl_even.setVisibility(View.INVISIBLE);
+            viewHolder.rl_odd.setVisibility(View.VISIBLE);
+        }
         return convertView;
+    }
+
+    private class ViewHolder {
+        RelativeLayout rl_odd;
+        RelativeLayout rl_even;
     }
 }

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.jaredgoldman.jared2017summer.AdvanceListViewActivity;
 import com.example.jaredgoldman.jared2017summer.NotificationActivity;
 import com.example.jaredgoldman.jared2017summer.R;
 import com.example.jaredgoldman.jared2017summer.ScaleTypeActivity;
@@ -32,7 +33,7 @@ public class DemoFragment extends Fragment {
         contentList.add("ImageScaleType");
         contentList.add("9Patch");
         contentList.add("Notification");
-        contentList.add("B");
+        contentList.add("AdvanceListView");
         contentList.add("C");
         contentList.add("LaunchMode");
         contentList.add("E");
@@ -73,7 +74,11 @@ public class DemoFragment extends Fragment {
                         Intent intent3 = new Intent(getActivity(), NotificationActivity.class);
                         startActivity(intent3);
                         break;
-                    case 6:
+                    case 4:
+                        Intent intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
+                        startActivity(intent4);
+                        break;
+                    case 6: //HOMEWORK 2
                         Intent intent6 = new Intent(getActivity(), ViewPagerActivity.class);
                         startActivity(intent6);
                         break;
