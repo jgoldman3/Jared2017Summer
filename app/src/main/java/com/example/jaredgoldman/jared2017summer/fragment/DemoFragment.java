@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.jaredgoldman.jared2017summer.NotificationActivity;
 import com.example.jaredgoldman.jared2017summer.R;
 import com.example.jaredgoldman.jared2017summer.ScaleTypeActivity;
 import com.example.jaredgoldman.jared2017summer.ViewPagerActivity;
@@ -30,7 +31,7 @@ public class DemoFragment extends Fragment {
         contentList.add("ViewPager");
         contentList.add("ImageScaleType");
         contentList.add("9Patch");
-        contentList.add("A");
+        contentList.add("Notification");
         contentList.add("B");
         contentList.add("C");
         contentList.add("LaunchMode");
@@ -67,6 +68,10 @@ public class DemoFragment extends Fragment {
                     case 1:
                         Intent intent1 = new Intent(getActivity(), ScaleTypeActivity.class);
                         startActivity(intent1);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(getActivity(), NotificationActivity.class);
+                        startActivity(intent3);
                         break;
                     case 6:
                         Intent intent6 = new Intent(getActivity(), ViewPagerActivity.class);
