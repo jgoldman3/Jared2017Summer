@@ -36,6 +36,6 @@ public class ScalePagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         container.addView(list.get(position), 0);
-        return super.instantiateItem(container, position);
+        return list.get(position);
     }
 }
