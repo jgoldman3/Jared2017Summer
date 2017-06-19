@@ -34,7 +34,7 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Notification");
         contentList.add("AdvanceListView");
-        contentList.add("C");
+        contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
         contentList.add("E");
         contentList.add("F");
@@ -77,6 +77,10 @@ public class DemoFragment extends Fragment {
                     case 4:
                         Intent intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent4);
+                        break;
+                    case 5:
+                        Intent intent5 = new Intent(getActivity(), AdvanceListViewActivity.class);
+                        startActivity(intent5);
                         break;
                     case 6: //HOMEWORK 2
                         Intent intent6 = new Intent(getActivity(), ViewPagerActivity.class);
