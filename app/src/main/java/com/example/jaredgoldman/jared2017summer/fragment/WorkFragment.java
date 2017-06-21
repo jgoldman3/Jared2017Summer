@@ -8,19 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.jaredgoldman.jared2017summer.R;
 
 public class WorkFragment extends Fragment {
 
-    public WorkFragment() {
-
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -29,4 +25,8 @@ public class WorkFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_work, container, false);
     }
+
+    //public void submit(View v){
+    //    Toast.makeText(WorkFragment.this.getContext(),"You clicked submit",Toast.LENGTH_SHORT).show();
+    //}
 }

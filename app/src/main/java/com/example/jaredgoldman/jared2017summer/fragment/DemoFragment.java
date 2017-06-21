@@ -11,12 +11,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.jaredgoldman.jared2017summer.ActivityA;
 import com.example.jaredgoldman.jared2017summer.AdvanceListViewActivity;
+import com.example.jaredgoldman.jared2017summer.AdvanceViewPagerActivity;
+import com.example.jaredgoldman.jared2017summer.CheckBoxActivity;
+import com.example.jaredgoldman.jared2017summer.DialogActivity;
 import com.example.jaredgoldman.jared2017summer.NotificationActivity;
 import com.example.jaredgoldman.jared2017summer.R;
+import com.example.jaredgoldman.jared2017summer.RadioGroupActivity;
+import com.example.jaredgoldman.jared2017summer.ResultActivity;
 import com.example.jaredgoldman.jared2017summer.ScaleTypeActivity;
 import com.example.jaredgoldman.jared2017summer.ViewPagerActivity;
 import com.example.jaredgoldman.jared2017summer.adapter.ListNormalAdapter;
+import com.example.jaredgoldman.jared2017summer.audio.BaseBean;
 
 import java.util.ArrayList;
 
@@ -36,10 +43,10 @@ public class DemoFragment extends Fragment {
         contentList.add("AdvanceListView");
         contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
-        contentList.add("E");
-        contentList.add("F");
-        contentList.add("G");
-        contentList.add("H");
+        contentList.add("ActivityResult");
+        contentList.add("RadioGroup");
+        contentList.add("CheckBox");
+        contentList.add("Dialog");
         contentList.add("I");
         contentList.add("J");
         contentList.add("K");
@@ -79,12 +86,40 @@ public class DemoFragment extends Fragment {
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent5 = new Intent(getActivity(), AdvanceListViewActivity.class);
+                        Intent intent5 = new Intent(getActivity(), AdvanceViewPagerActivity.class);
                         startActivity(intent5);
                         break;
                     case 6: //HOMEWORK 2
-                        Intent intent6 = new Intent(getActivity(), ViewPagerActivity.class);
+                        Intent intent6 = new Intent(getActivity(), ActivityA.class);
+                        intent6.putExtra("StringInfo","fromDemoFragment");
+                        intent6.putExtra("IntegerInfo",10);
+                        Bundle bundle = new Bundle();
+                        BaseBean bean = new BaseBean();
+
+                        bean.setName("bean");
+
+                        bundle.putString("StringBundle","FromBundleDemo");
+                        bundle.putInt("IntegerBundle",101);
+                        bundle.putSerializable("Object",bean);
+
+                        intent6.putExtra("Bundle",bundle);
                         startActivity(intent6);
+                        break;
+                    case 7:
+                        Intent intent7 = new Intent(getActivity(), ResultActivity.class);
+                        startActivity(intent7);
+                        break;
+                    case 8:
+                        Intent intent8 = new Intent(getActivity(), RadioGroupActivity.class);
+                        startActivity(intent8);
+                        break;
+                    case 9:
+                        Intent intent9 = new Intent(getActivity(), CheckBoxActivity.class);
+                        startActivity(intent9);
+                        break;
+                    case 10:
+                        Intent intent10 = new Intent(getActivity(), DialogActivity.class);
+                        startActivity(intent10);
                         break;
                     default:
                 }
