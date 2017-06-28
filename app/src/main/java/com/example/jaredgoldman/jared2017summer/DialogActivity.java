@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 
+import com.example.jaredgoldman.jared2017summer.dialog.CustomDialog;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -14,6 +16,7 @@ import butterknife.OnClick;
 public class DialogActivity extends BaseActivity {
 
     private int checkedID = 0;
+
 
     @BindView(R.id.activity_dialog_rad)
     RadioGroup radioGroup;
@@ -43,7 +46,15 @@ public class DialogActivity extends BaseActivity {
                 shortToast("You chose number 7.");
                 break;
             case R.id.activity_dialog_rad8:
-                shortToast("You chose number 8.");
+                CustomDialog customDialog =
+                        new CustomDialog(this, new CustomDialog.ICutsomDialogListener() {
+                            @Override
+                            public void onOKClicked(String msg) {
+                                shortToast(msg);
+                            }
+                        });
+                customDialog.setCanceledOnTouchOutside(true);
+                customDialog.show();
                 break;
             default:
         }
@@ -60,5 +71,34 @@ public class DialogActivity extends BaseActivity {
                 checkedID = checkedId;
             }
         });
+    }
+
+    private void normalDialog() {
+        //TODO: read/watch the video. button 1
+    }
+
+    private void listDialog() {
+        //TODO: same as normal. button 2
+    }
+
+    private void singleChoiceDialog() {
+        //TODO: same as normal. button 3
+    }
+
+    private void multiChoiceDialog() {
+        //TODO: same as normal. button 4
+    }
+
+    private void waitingDialog() {
+        //TODO: same as normal. button 5
+    }
+
+    private void progressDialog() {
+        //TODO: same as normal. button 6
+        
+    }
+
+    private void inputDialog() {
+        //TODO: same as normal. button 7
     }
 }

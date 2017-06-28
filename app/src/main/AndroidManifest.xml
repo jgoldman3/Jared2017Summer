@@ -27,7 +27,19 @@
         <activity android:name=".ResultActivity2" />
         <activity android:name=".RadioGroupActivity" />
         <activity android:name=".CheckBoxActivity" />
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity
+            android:name=".ActivityB"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ActivityC"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActivityD"
+            android:launchMode="singleInstance" />
+        <activity android:name=".HandlerActivity" />
+        <activity android:name=".RunnableHandlerActivity" />
+        <activity android:name=".AnimationActivity"></activity>
     </application>
 
 </manifest>
