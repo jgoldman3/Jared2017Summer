@@ -15,8 +15,10 @@ import com.example.jaredgoldman.jared2017summer.ActivityA;
 import com.example.jaredgoldman.jared2017summer.AdvanceListViewActivity;
 import com.example.jaredgoldman.jared2017summer.AdvanceViewPagerActivity;
 import com.example.jaredgoldman.jared2017summer.AnimationActivity;
+import com.example.jaredgoldman.jared2017summer.AnimatorActivity;
 import com.example.jaredgoldman.jared2017summer.CheckBoxActivity;
 import com.example.jaredgoldman.jared2017summer.DialogActivity;
+import com.example.jaredgoldman.jared2017summer.GestureActivity;
 import com.example.jaredgoldman.jared2017summer.HandlerActivity;
 import com.example.jaredgoldman.jared2017summer.NotificationActivity;
 import com.example.jaredgoldman.jared2017summer.R;
@@ -24,6 +26,7 @@ import com.example.jaredgoldman.jared2017summer.RadioGroupActivity;
 import com.example.jaredgoldman.jared2017summer.ResultActivity;
 import com.example.jaredgoldman.jared2017summer.RunnableHandlerActivity;
 import com.example.jaredgoldman.jared2017summer.ScaleTypeActivity;
+import com.example.jaredgoldman.jared2017summer.SharedPreferenceActivity;
 import com.example.jaredgoldman.jared2017summer.ViewPagerActivity;
 import com.example.jaredgoldman.jared2017summer.adapter.ListNormalAdapter;
 import com.example.jaredgoldman.jared2017summer.audio.BaseBean;
@@ -55,7 +58,7 @@ public class DemoFragment extends Fragment {
         contentList.add("Animation");
         contentList.add("Animator");
         contentList.add("Gesture");
-        contentList.add("DataStorage");
+        contentList.add("SharedPreference");
     }
 
     @Override
@@ -138,6 +141,18 @@ public class DemoFragment extends Fragment {
                     case 13:
                         Intent intent13 = new Intent(getActivity(), AnimationActivity.class);
                         startActivity(intent13);
+                        break;
+                    case 14:
+                        Intent intent14 = new Intent(getActivity(), AnimatorActivity.class);
+                        startActivity(intent14);
+                        break;
+                    case 15:
+                        Intent intent15 = new Intent(getActivity(), GestureActivity.class);
+                        startActivity(intent15);
+                        break;
+                    case 16:
+                        Intent intent16 = new Intent(getActivity(), SharedPreferenceActivity.class);
+                        startActivity(intent16);
                         break;
                     default:
                 }

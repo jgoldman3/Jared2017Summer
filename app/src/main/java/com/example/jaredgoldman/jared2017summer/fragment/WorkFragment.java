@@ -12,7 +12,14 @@ import android.widget.Toast;
 
 import com.example.jaredgoldman.jared2017summer.R;
 
+import butterknife.OnClick;
+
 public class WorkFragment extends Fragment {
+
+    @OnClick(R.id.fragment_work_submit)
+    public void submit(View v) {
+        Toast.makeText(WorkFragment.this.getContext(), "You clicked submit", Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +33,4 @@ public class WorkFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_work, container, false);
     }
 
-    //public void submit(View v){
-    //    Toast.makeText(WorkFragment.this.getContext(),"You clicked submit",Toast.LENGTH_SHORT).show();
-    //}
 }
